@@ -1,0 +1,15 @@
+<launch>
+    <!-- Tracking Odometry-->
+  <!-- <node pkg="trajectory_tool" type="trajectoryRecorder" name="trajectoryRecorder">
+    <param name="transInterval" type="double" value="0.01" />
+    <param name="yawInterval" type="double" value="5.0" />
+  </node> -->
+
+  <!-- Tracking tf base->map -->
+  <node pkg="trajectory_tool" type="map_trajectoryRecorder" name="trajectoryRecorder" output="screen">
+    <param name="transInterval" type="double" value="0.01" />
+    <param name="yawInterval" type="double" value="5.0" />
+    <param name="robotBase" type="string" value="base_link" />
+  </node>
+  
+</launch>
